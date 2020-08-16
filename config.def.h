@@ -63,15 +63,14 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ vol_perc, "%s%%", "/dev/mixer" },
-	{ datetime, "%s",           "%F %T" },
+	{ run_command, " %s%% ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
 	{ battery_perc, " |  %s%%", "BAT1" },
 	{ cpu_perc, " |  %s%%", NULL },
 	{ ram_perc, " |  %s%%", NULL },
 	{ temp, " |  %sC", "/sys/class/thermal/thermal_zone0/temp" },
 	{ ipv4, " |  %s", "wlp2s0" },
 	{ wifi_essid, " |  %s", "wlp2s0" },
-	{ datetime, "%s", "%a %d %H:%M" },
-	{ keyboard_indicators, "%s", "" },
-	{ username, "%s", "" },
+	{ datetime, "| %s", "%F (%a) %R" },
+	{ username, "| %s", "" },
+	{ keyboard_indicators, " | %s", "c?n?" },
 };
