@@ -70,7 +70,7 @@ static const struct arg args[] = {
 	{ temp, " |  %sC", "/sys/class/thermal/thermal_zone0/temp" },
 	{ ipv4, " |  %s", "wlp2s0" },
 	{ wifi_essid, " |  %s", "wlp2s0" },
-	{ datetime, "| %s", "%F (%a) %R" },
-	{ username, "| %s", "" },
+	{ datetime, " | %s", "%F (%a) %R" },
+	{ username, " | %s", "" },
 	{ keyboard_indicators, " | %s", "c?n?" },
 };
