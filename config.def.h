@@ -72,5 +72,5 @@ static const struct arg args[] = {
 	{ wifi_essid, " %s", "wlp2s0" },
 	{ datetime, " %s", "%F (%a) %R" },
 	{ username, " %s", "" },
-	{ keyboard_indicators, " %s", "??" },
+	{ keyboard_indicators, " %s", "c?n?" },
 };
